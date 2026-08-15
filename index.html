@@ -5,42 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOGASHI TMD | Soluciones Industriales y del Hogar</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { color: #333; line-height: 1.6; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        
+        body { 
+            color: #000000; 
+            background-color: #ffffff;
+            line-height: 1.6; 
+        }
         
         /* Encabezado */
-        header { background-color: #0b2545; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: #eef4f8; letter-spacing: 1px; }
-        .logo span { color: #134074; background: #8da9c4; padding: 2px 6px; border-radius: 4px; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
-        nav a:hover { color: #8da9c4; }
+        header { 
+            background-color: #000000; 
+            color: #ffffff; 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            border-bottom: 3px solid #e95a0c;
+        }
 
-        /* Banner Principal */
-        .hero { background: linear-gradient(rgba(11, 37, 69, 0.8), rgba(11, 37, 69, 0.8)), url('https://picsum.photos/1200/500') center/cover; color: white; text-align: center; padding: 100px 20px; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 20px; }
-        .btn { background-color: #8da9c4; color: #0b2545; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; }
-        .btn:hover { background-color: #EEF4F8; }
+        .logo { 
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem; 
+            font-weight: 800; 
+            color: #ffffff; 
+            letter-spacing: 1px; 
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 45px;
+            margin-right: 12px;
+        }
+
+        .logo span { 
+            color: #e95a0c; 
+            margin-left: 6px;
+        }
+
+        nav a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            margin-left: 20px; 
+            font-weight: 600; 
+            transition: color 0.3s ease; 
+        }
+
+        nav a:hover { 
+            color: #e95a0c; 
+        }
+
+        /* Banner Principal (Hero) */
+        .hero { 
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://picsum.photos/1200/500') center/cover; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 100px 20px; 
+            border-bottom: 4px solid #e95a0c;
+        }
+
+        .hero h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 15px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            color: #e95a0c;
+        }
+
+        .hero p { 
+            font-size: 1.2rem; 
+            max-width: 650px; 
+            margin: 0 auto 25px; 
+            color: #dddddd;
+        }
+
+        /* Botones */
+        .btn { 
+            background-color: #e95a0c; 
+            color: #ffffff; 
+            padding: 12px 28px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            display: inline-block; 
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+        }
+
+        .btn:hover { 
+            background-color: #c84b08; 
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb956;
+        }
 
         /* Secciones */
-        .container { padding: 60px 5%; max-width: 1200px; margin: auto; }
-        h2 { text-align: center; color: #0b2545; margin-bottom: 40px; font-size: 2rem; }
+        .container { 
+            padding: 60px 5%; 
+            max-width: 1200px; 
+            margin: auto; 
+        }
+
+        h2 { 
+            text-align: center; 
+            color: #000000; 
+            margin-bottom: 40px; 
+            font-size: 2.2rem; 
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background-color: #e95a0c;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
         
-        /* Grid de Productos/Servicios */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; background: white; }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-title { font-size: 1.2rem; margin-bottom: 10px; color: #0b2545; }
+        /* Grid de Productos / Servicios */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .card { 
+            border: 1px solid #e0e0e0; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            text-align: center; 
+            background: #ffffff; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(233, 90, 12, 0.2);
+            border-color: #e95a0c;
+        }
+
+        .card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+        }
+
+        .card-body { 
+            padding: 20px; 
+        }
+
+        .card-title { 
+            font-size: 1.3rem; 
+            margin-bottom: 10px; 
+            color: #000000; 
+            font-weight: 700;
+        }
+
+        .card-text {
+            color: #555555;
+            font-size: 0.95rem;
+        }
+
+        /* Sección Contacto */
+        .contact-box {
+            background-color: #f9f9f9; 
+            border-radius: 8px; 
+            border-left: 5px solid #e95a0c;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 1.05rem;
+        }
 
         /* Pie de página */
-        footer { background-color: #0b2545; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
+        footer { 
+            background-color: #000000; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 25px 20px; 
+            margin-top: 40px; 
+            font-size: 0.9rem; 
+            border-top: 3px solid #e95a0c;
+        }
+
+        footer p span {
+            color: #e95a0c;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
+    <!-- ENCABEZADO CON LOGO Y NAVEGACIÓN -->
     <header>
-        <div class="logo">HOGASHI <span>TMD</span></div>
+        <div class="logo">
+            <!-- Descomenta la siguiente línea si vas a subir la imagen de tu logo llamada logo.png -->
+            <!-- <img src="logo.png" alt="HOGASHI TMD Logo"> -->
+            HOGASHI<span>TMD</span>
+        </div>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#productos">Productos</a>
@@ -49,53 +237,59 @@
         </nav>
     </header>
 
+    <!-- BANNER PRINCIPAL -->
     <section id="inicio" class="hero">
-        <h1>Calidad e Innovación con HOGASHI TMD</h1>
-        <p>Distribución y soluciones integrales para tus proyectos e industrias en Venezuela.</p>
+        <h1>Calidad e Innovación con <span>HOGASHI TMD</span></h1>
+        <p>Distribución y soluciones integrales de alta eficiencia para tus proyectos e industrias en Venezuela.</p>
         <a href="#contacto" class="btn">Contáctanos</a>
     </section>
 
+    <!-- SECCIÓN DE PRODUCTOS / CATÁLOGO -->
     <section id="productos" class="container">
         <h2>Nuestros Productos</h2>
         <div class="grid">
             <div class="card">
-                <img src="https://picsum.photos/300/200?random=1" alt="Producto 1">
+                <img src="https://picsum.photos/300/200?random=1" alt="Equipos de Bombeo">
                 <div class="card-body">
                     <div class="card-title">Equipos de Bombeo</div>
-                    <p>Soluciones de alta eficiencia para manejo de fluidos.</p>
+                    <p class="card-text">Soluciones de alta eficiencia para manejo de fluidos industriales y residenciales.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://picsum.photos/300/200?random=2" alt="Producto 2">
+                <img src="https://picsum.photos/300/200?random=2" alt="Sistemas Eléctricos">
                 <div class="card-body">
                     <div class="card-title">Sistemas Eléctricos</div>
-                    <p>Componentes y tableros de máxima seguridad.</p>
+                    <p class="card-text">Componentes, tableros y protección eléctrica de máxima seguridad.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://picsum.photos/300/200?random=3" alt="Producto 3">
+                <img src="https://picsum.photos/300/200?random=3" alt="Maquinaria Industrial">
                 <div class="card-body">
                     <div class="card-title">Maquinaria Industrial</div>
-                    <p>Tecnología para potenciar el rendimiento de tu empresa.</p>
+                    <p class="card-text">Tecnología de punta para potenciar el rendimiento y producción de tu empresa.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="container" style="background-color: #f9f9f9; border-radius: 8px;">
-        <h2>Contacto</h2>
-        <p style="text-align: center; margin-bottom: 20px;">¿Tienes dudas o necesitas un presupuesto? Escríbenos directamente.</p>
-        <div style="text-align: center;">
-            <p><strong>Ubicación:</strong> Venezuela</p>
-            <p><strong>Teléfono:</strong> +58 (XXX) XXX-XXXX</p>
-            <p><strong>Correo:</strong> contacto@hogashitmd.com</p>
-            <br>
-            <a href="https://wa.me/580000000000" class="btn" style="background-color: #25D366; color: white;" target="_blank">Escribir por WhatsApp</a>
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="container">
+        <div class="contact-box">
+            <h2>Contacto Directo</h2>
+            <p style="margin-bottom: 20px; color: #555;">¿Tienes dudas o necesitas una cotización? Escríbenos directamente y te atenderemos de inmediato.</p>
+            <div class="contact-info">
+                <p><strong>Ubicación:</strong> Venezuela</p>
+                <p><strong>Teléfono:</strong> +58 (XXX) XXX-XXXX</p>
+                <p><strong>Correo:</strong> contacto@hogashitmd.com</p>
+                <br>
+                <a href="https://wa.me/580000000000" class="btn btn-whatsapp" target="_blank">Escribir por WhatsApp</a>
+            </div>
         </div>
     </section>
 
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>&copy; 2026 HOGASHI TMD. Todos los derechos reservados.</p>
+        <p>&copy; 2026 <span>HOGASHI TMD</span>. Todos los derechos reservados.</p>
     </footer>
 
 </body>
