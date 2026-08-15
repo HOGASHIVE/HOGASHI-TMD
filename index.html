@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOGASHI TMD | Soluciones Industriales y del Hogar</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #333; line-height: 1.6; }
+        
+        /* Encabezado */
+        header { background-color: #0b2545; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #eef4f8; letter-spacing: 1px; }
+        .logo span { color: #134074; background: #8da9c4; padding: 2px 6px; border-radius: 4px; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #8da9c4; }
+
+        /* Banner Principal */
+        .hero { background: linear-gradient(rgba(11, 37, 69, 0.8), rgba(11, 37, 69, 0.8)), url('https://picsum.photos/1200/500') center/cover; color: white; text-align: center; padding: 100px 20px; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 20px; }
+        .btn { background-color: #8da9c4; color: #0b2545; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; }
+        .btn:hover { background-color: #EEF4F8; }
+
+        /* Secciones */
+        .container { padding: 60px 5%; max-width: 1200px; margin: auto; }
+        h2 { text-align: center; color: #0b2545; margin-bottom: 40px; font-size: 2rem; }
+        
+        /* Grid de Productos/Servicios */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; background: white; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-title { font-size: 1.2rem; margin-bottom: 10px; color: #0b2545; }
+
+        /* Pie de página */
+        footer { background-color: #0b2545; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">HOGASHI <span>TMD</span></div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Calidad e Innovación con HOGASHI TMD</h1>
+        <p>Distribución y soluciones integrales para tus proyectos e industrias en Venezuela.</p>
+        <a href="#contacto" class="btn">Contáctanos</a>
+    </section>
+
+    <section id="productos" class="container">
+        <h2>Nuestros Productos</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=1" alt="Producto 1">
+                <div class="card-body">
+                    <div class="card-title">Equipos de Bombeo</div>
+                    <p>Soluciones de alta eficiencia para manejo de fluidos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=2" alt="Producto 2">
+                <div class="card-body">
+                    <div class="card-title">Sistemas Eléctricos</div>
+                    <p>Componentes y tableros de máxima seguridad.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=3" alt="Producto 3">
+                <div class="card-body">
+                    <div class="card-title">Maquinaria Industrial</div>
+                    <p>Tecnología para potenciar el rendimiento de tu empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="container" style="background-color: #f9f9f9; border-radius: 8px;">
+        <h2>Contacto</h2>
+        <p style="text-align: center; margin-bottom: 20px;">¿Tienes dudas o necesitas un presupuesto? Escríbenos directamente.</p>
+        <div style="text-align: center;">
+            <p><strong>Ubicación:</strong> Venezuela</p>
+            <p><strong>Teléfono:</strong> +58 (XXX) XXX-XXXX</p>
+            <p><strong>Correo:</strong> contacto@hogashitmd.com</p>
+            <br>
+            <a href="https://wa.me/580000000000" class="btn" style="background-color: #25D366; color: white;" target="_blank">Escribir por WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 HOGASHI TMD. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
